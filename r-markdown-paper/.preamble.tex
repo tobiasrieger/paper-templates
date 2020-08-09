@@ -1,0 +1,16 @@
+\usepackage[bottom]{footmisc}                                                             %Moves footnotes to the bottom
+\usepackage{graphicx}                                                                     %Used to include_graphics
+\usepackage[round]{natbib}                                                                %Citation with rounded brackets
+\usepackage{changepage}                                                                   %Used to adjust margins on the fly
+\pagenumbering{gobble}                                                                    %Removes page numbers
+\usepackage[small]{titlesec}                                                              %Sets heading size
+\usepackage{titling}                                                                      %Title styling
+\setlength{\droptitle}{-30pt}                                                             %Reduce title margin
+\pretitle{\begin{center}\Large\begin{textbf}}                                             %Set title style
+\posttitle{\end{textbf}\par\end{center}\vskip 16pt}                                       %End title style
+\author{\textbf{Tobias Rieger, 11807618}\\ Graz University of Technology\\ {\normalsize \texttt{tobias.rieger@student.tugraz.at}}}
+\preauthor{\begin{center}\linespread{1.2}\large}                                          %Set author style
+\postauthor{\par\end{center}\vspace{-16pt}}                                                 %End author style
+\titlespacing\section{0pt}{14pt plus 4pt minus 2pt}{10pt plus 2pt minus 2pt}              %Set section margins with glue
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}            %Set section margins with glue
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}         %Set section margins with glue

@@ -1,0 +1,48 @@
+---
+title: An R-Markdown Template for Knitr and Pandoc Pdf Compilation
+
+output:
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: true
+    keep_tex: true
+    template: .pandoc_latex_conversion_template.tex
+    citation_package: natbib
+    includes:
+        in_header: .preamble.tex
+
+bibliography: references.bib
+link-citations: true
+
+fig_width: 6
+fig_height: 4
+
+geometry: margin=2.5cm, bottom=3.5cm
+monofont: Courier New
+mainfont: Times
+fontsize: 11pt
+
+documentclass: article
+classoption: a4paper, twocolumn
+---
+
+<!-- Markdown style annotations and citations won't work in LaTeX blocks -->
+\begin{adjustwidth}{16pt}{16pt}
+\section*{\centering Introduction}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet cursus metus, at fringilla dolor. Suspendisse sagittis neque sed ligula fringilla mattis. Donec dictum lectus in lorem venenatis, at tristique urna molestie. Nullam tincidunt auctor ante. In accumsan non ex tempus suscipit. Duis sit amet quam vitae risus euismod volutpat. Curabitur posuere mauris in cursus congue. Etiam at tellus rhoncus felis feugiat elementum. Phasellus rhoncus ex eget tempus dictum.
+\end{adjustwidth}
+
+# First Heading
+Lorem ipsum dolor sit amet[^1], _consectetur_ adipiscing elit. *Aliquam* sit amet cursus metus, at fringilla dolor. Suspendisse sagittis neque sed ligula fringilla mattis. Donec dictum lectus in lorem venenatis, at __tristique__ urna molestie. **Nullam** tincidunt auctor ante. In accumsan non ex tempus suscipit. Duis sit amet quam vitae risus euismod volutpat. Curabitur posuere mauris in cursus congue. Etiam at tellus rhoncus felis feugiat elementum. Phasellus rhoncus ex eget tempus dictum [@Chang2015]. Mauris rhoncus orci in nisi mattis pulvinar. Cras mauris mi, viverra id blandit non, sagittis molestie nulla.
+
+[^1]: https://www.lipsum.com
+
+## Sub-Heading
+Morbi imperdiet hendrerit tortor, ut ultricies odio feugiat ut. In eleifend viverra enim id feugiat [@RCoreTeam]. Aenean dui elit, ultrices vel pretium molestie, convallis in nisl. Fusce convallis arcu a congue fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam auctor, risus sit amet ornare porttitor, nunc enim mollis felis, in finibus felis nibh quis urna.
+
+![Template Caption](images/Binary_search_tree.png){ width=35% }
+
+Etiam eget sagittis odio. Donec dui elit, consectetur ac mi eget, condimentum bibendum nulla. In tempus lorem eu velit mattis, sed interdum mi elementum. Nam nisi ex, interdum a nisl sit amet, luctus ullamcorper ligula. Aenean malesuada consequat semper. Etiam porta gravida purus, id ullamcorper tortor condimentum quis. Vestibulum ac velit augue. Nunc at posuere dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. (See [§1](#first-heading))
+
+# Heading
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet cursus metus, at fringilla dolor. Suspendisse sagittis neque sed ligula fringilla mattis. Donec dictum lectus in lorem venenatis, at tristique urna molestie. Nullam tincidunt auctor ante. In accumsan non ex tempus suscipit. Duis sit amet quam vitae risus euismod volutpat. Curabitur posuere mauris in cursus congue. Etiam at tellus rhoncus felis feugiat elementum. Phasellus rhoncus ex eget tempus dictum. Mauris rhoncus orci in nisi mattis pulvinar. Cras mauris mi, viverra id blandit non, sagittis molestie nulla.
