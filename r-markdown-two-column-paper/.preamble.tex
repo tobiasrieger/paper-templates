@@ -15,3 +15,11 @@
 \titlespacing\section{0pt}{14pt plus 4pt minus 2pt}{10pt plus 2pt minus 2pt}              %Set section margins with glue
 \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}            %Set section margins with glue
 \titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}         %Set section margins with glue
+\usepackage{listings}                                                                     %Add code with comment functionality
+\newcommand*{\Comment}[1]{\hfill\makebox[3.0cm][l]{#1}}
+\lstset{basicstyle=\footnotesize\sffamily,
+  numbers=none,
+  columns=fullflexible,
+  showstringspaces=false,
+  escapechar=\&% char to escape out of listings and back to LaTeX
+}
