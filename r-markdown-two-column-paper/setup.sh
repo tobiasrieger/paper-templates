@@ -5,7 +5,6 @@ if [ "$#" -ne 1 ]; then
 fi
 
 rm -rf .git
-rm README.md
 rm images/*
 rm template.tex
 mv template.rmd $1.rmd
